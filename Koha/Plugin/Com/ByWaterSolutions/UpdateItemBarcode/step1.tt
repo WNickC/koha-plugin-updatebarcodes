@@ -1,0 +1,33 @@
+[% INCLUDE 'doc-head-open.inc' %]
+ <title>Koha: Plugin: Update barcode</title>
+  <script type="text/javascript" src="[% PLUGIN_PATH %]/datepicker/js/datepicker.js"></script>
+ <link href="[% PLUGIN_PATH %]/datepicker/css/datepicker.css" rel="stylesheet" type="text/css" />
+[% INCLUDE 'doc-head-close.inc' %]
+</head>
+<body>
+[% INCLUDE 'header.inc' %]
+[% INCLUDE 'cat-search.inc' %]
+
+<div id="breadcrumbs"><a href="/cgi-bin/koha/mainpage.pl">Home</a> &rsaquo; <a href="/cgi-bin/koha/plugins/plugins-home.pl">Plugins</a> &rsaquo; Update barcode</div>
+
+<div id="doc3">
+
+    <h3>Update barcode tool</h3>
+
+    <p>This tool will hopefully allow you to easily update a barcode for an item.</p>
+
+	<form method="get">
+        <input type="hidden" name="class" value="[% CLASS %]"/>
+        <input type="hidden" name="method" value="[% METHOD %]"/>
+        <input type="hidden" name="next_step" value="2"/>
+
+        <p>
+            <label for="barcode">Barcode: </label>
+            <input type="text" name="barcode"/>
+        </p>
+
+		<p><input type="submit" value="Look up item" /></p>
+
+	</form>
+
+[% INCLUDE 'intranet-bottom.inc' %]
